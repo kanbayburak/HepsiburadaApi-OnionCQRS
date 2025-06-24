@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{302E9509-D39F-4ED9-9AC1-E63A652813C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{FEF007E9-B77C-4E52-BE04-CE8561D922D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{329C3130-BDBE-4347-A362-A9AD75FF3919}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HepsiburadaApi.Domain", "Core\HepsiburadaApi.Domain\HepsiburadaApi.Domain.csproj", "{85A0ADFA-03EF-4F19-9337-26AC0729A432}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HepsiburadaApi.Application", "Core\HepsiburadaApi.Application\HepsiburadaApi.Application.csproj", "{C7EEC4A8-98EF-4641-BE18-BEF5E8C213B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HepsiburadaApi.Infrastructure", "Infrastructure\HepsiburadaApi.Infrastructure\HepsiburadaApi.Infrastructure.csproj", "{264080E9-7BF1-4FF9-AE39-75B75059B962}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HepsiburadaApi.Persistance", "Infrastructure\HepsiburadaApi.Persistance\HepsiburadaApi.Persistance.csproj", "{1C11F0A6-E13E-4784-B0DC-2C70552E5645}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HepsiburadaApi.Api", "Presentation\HepsiburadaApi.Api\HepsiburadaApi.Api.csproj", "{06F6D981-88EA-4866-B649-7ADA725A553E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85A0ADFA-03EF-4F19-9337-26AC0729A432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85A0ADFA-03EF-4F19-9337-26AC0729A432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85A0ADFA-03EF-4F19-9337-26AC0729A432}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85A0ADFA-03EF-4F19-9337-26AC0729A432}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7EEC4A8-98EF-4641-BE18-BEF5E8C213B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7EEC4A8-98EF-4641-BE18-BEF5E8C213B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7EEC4A8-98EF-4641-BE18-BEF5E8C213B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7EEC4A8-98EF-4641-BE18-BEF5E8C213B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{264080E9-7BF1-4FF9-AE39-75B75059B962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{264080E9-7BF1-4FF9-AE39-75B75059B962}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{264080E9-7BF1-4FF9-AE39-75B75059B962}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{264080E9-7BF1-4FF9-AE39-75B75059B962}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C11F0A6-E13E-4784-B0DC-2C70552E5645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C11F0A6-E13E-4784-B0DC-2C70552E5645}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C11F0A6-E13E-4784-B0DC-2C70552E5645}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C11F0A6-E13E-4784-B0DC-2C70552E5645}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06F6D981-88EA-4866-B649-7ADA725A553E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06F6D981-88EA-4866-B649-7ADA725A553E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06F6D981-88EA-4866-B649-7ADA725A553E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06F6D981-88EA-4866-B649-7ADA725A553E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{85A0ADFA-03EF-4F19-9337-26AC0729A432} = {302E9509-D39F-4ED9-9AC1-E63A652813C6}
+		{C7EEC4A8-98EF-4641-BE18-BEF5E8C213B8} = {302E9509-D39F-4ED9-9AC1-E63A652813C6}
+		{264080E9-7BF1-4FF9-AE39-75B75059B962} = {FEF007E9-B77C-4E52-BE04-CE8561D922D2}
+		{1C11F0A6-E13E-4784-B0DC-2C70552E5645} = {FEF007E9-B77C-4E52-BE04-CE8561D922D2}
+		{06F6D981-88EA-4866-B649-7ADA725A553E} = {329C3130-BDBE-4347-A362-A9AD75FF3919}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC614DCF-D358-4AA5-A91B-EE721B41604E}
+	EndGlobalSection
+EndGlobal
