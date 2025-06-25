@@ -1,4 +1,5 @@
-﻿using HepsiburadaApi.Persistance.Context;
+﻿using HepsiburadaApi.Application.Interfaces;
+using HepsiburadaApi.Persistance.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,7 +16,12 @@ namespace HepsiburadaApi.Persistance
     {
         public static void AddPersistance(this IServiceCollection services, IConfiguration configuration) 
         {
-            services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<AppDbContext>(opt => 
+            opt.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+
+            //alttaki kısımda ReadRepository lerin Depency Injection larını gerçeklerştiriyorum
+            services.AddScoped(typeof(IReadRepository<>), typeof(IReadRepository<>));
+            services.AddScoped(typeof(IWriteRepository<>), typeof(IWriteRepository<>)); 
         }
     }
 }
