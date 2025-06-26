@@ -11,11 +11,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.5.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.20" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\HepsiburadaApi.Domain\HepsiburadaApi.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Products\Command\" />
   </ItemGroup>
 
 </Project>

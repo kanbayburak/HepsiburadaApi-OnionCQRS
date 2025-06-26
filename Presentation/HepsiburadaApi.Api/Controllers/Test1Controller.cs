@@ -17,7 +17,7 @@ namespace HepsiburadaApi.Api.Controllers
         }
 
 
-        [HttpGet]
+        [HttpGet]  //[action] koymasaydım buraya her http istelerime [HttpGet("Get")], [HttpGet("GetAllProduct tarzında oluşturmam gerekecekti")]
         public async Task<IActionResult> Get()
         {
             return Ok(await unitOfWork.GetReadRepository<Product>().GetAllAsync());
