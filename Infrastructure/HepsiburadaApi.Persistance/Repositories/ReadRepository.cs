@@ -1,4 +1,4 @@
-﻿using HepsiburadaApi.Application.Interfaces;
+﻿using HepsiburadaApi.Application.Interfaces.Repositories;
 using HepsiburadaApi.Domain.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
