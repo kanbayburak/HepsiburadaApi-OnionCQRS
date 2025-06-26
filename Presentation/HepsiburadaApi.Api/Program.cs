@@ -1,5 +1,6 @@
 using HepsiburadaApi.Persistance;
 using HepsiburadaApi.Application;
+using HepsiburadaApi.Mapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,7 @@ builder.Configuration
 
 builder.Services.AddPersistance(builder.Configuration);
 builder.Services.AddApplication();
+builder.Services.AddCustomMapper();
 
 var app = builder.Build();
 
