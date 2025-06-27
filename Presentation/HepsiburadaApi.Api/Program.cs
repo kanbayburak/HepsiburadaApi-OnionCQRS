@@ -1,6 +1,7 @@
 using HepsiburadaApi.Persistance;
 using HepsiburadaApi.Application;
 using HepsiburadaApi.Mapper;
+using HepsiburadaApi.Application.Exceptions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +32,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.ConfigurExceptionHandlingMiddleware();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
