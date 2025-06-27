@@ -3,11 +3,6 @@ using HepsiburadaApi.Application.Interfaces.UnitOfWorks;
 using HepsiburadaApi.Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HepsiburadaApi.Application.Features.Products.Queries.GetAllProducts
 {
@@ -24,7 +19,7 @@ namespace HepsiburadaApi.Application.Features.Products.Queries.GetAllProducts
 
         public async Task<IList<GetAllProductsQueryResponse>> Handle(GetAllProductsQueryRequest request, CancellationToken cancellationToken)
         {
-            var products = await unitOfWork.GetReadRepository<Product>().GetAllAsync(include: x =>x.Include(b => b.Brand));
+            var products = await unitOfWork.GetReadRepository<Product>().GetAllAsync(predicate: p=>!p.IsDeleted, include: x =>x.Include(b => b.Brand));
 
             var map = mapper.Map<GetAllProductsQueryResponse, Product>(products);
 
