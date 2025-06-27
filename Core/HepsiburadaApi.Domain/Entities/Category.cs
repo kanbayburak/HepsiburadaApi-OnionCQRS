@@ -25,7 +25,7 @@ namespace HepsiburadaApi.Domain.Entities
         public string Name { get; set; }
         public int Priorty { get; set; }
         public ICollection<Detail> Details { get; set; }  // 1'e çok ilişki 
-        public ICollection<Product> Products { get; set; }  // 1'e çok ilişki 
+        public ICollection<ProductCategory> ProductCategories { get; set; }  // 1'e çok ilişki 
 
     }
 }
