@@ -1,11 +1,11 @@
 ﻿using HepsiburadaApi.Application.Exceptions;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+using FluentValidation;
+using System.Globalization;
+using MediatR;
+using HepsiburadaApi.Application.Behaviors;
+
 
 namespace HepsiburadaApi.Application
 {
@@ -18,6 +18,11 @@ namespace HepsiburadaApi.Application
             services.AddTransient<ExceptionMiddleware>();
 
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
+
+            services.AddValidatorsFromAssembly(assembly);
+            ValidatorOptions.Global.LanguageManager.Culture = new CultureInfo("tr"); 
+
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(FluentValidationBehavior<,>));
         }
     }
 }
