@@ -1,11 +1,6 @@
 ﻿using HepsiburadaApi.Application.Bases;
 using HepsiburadaApi.Application.Features.Auth.Exception;
 using HepsiburadaApi.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HepsiburadaApi.Application.Features.Auth.Rules
 {
@@ -14,6 +9,12 @@ namespace HepsiburadaApi.Application.Features.Auth.Rules
         public Task UserShouldNotBeExist(User? user)
         {
             if (user is not null) throw new UserAlreadyExistException();
+            return Task.CompletedTask;
+        }
+
+        public Task EmailPasswordShouldNotBeInvalid(User? user, bool checkPassword)
+        {
+            if (user is null || !checkPassword) throw new EmailOrPasswordShouldNotBeInvalidException();
             return Task.CompletedTask;
         }
     }
