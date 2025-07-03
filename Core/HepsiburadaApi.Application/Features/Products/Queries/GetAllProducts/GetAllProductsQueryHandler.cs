@@ -1,4 +1,5 @@
-﻿using HepsiburadaApi.Application.Interfaces.AutoMapper;
+﻿using HepsiburadaApi.Application.DTOs;
+using HepsiburadaApi.Application.Interfaces.AutoMapper;
 using HepsiburadaApi.Application.Interfaces.UnitOfWorks;
 using HepsiburadaApi.Domain.Entities;
 using MediatR;
@@ -21,14 +22,15 @@ namespace HepsiburadaApi.Application.Features.Products.Queries.GetAllProducts
         {
             var products = await unitOfWork.GetReadRepository<Product>().GetAllAsync(predicate: p=>!p.IsDeleted, include: x =>x.Include(b => b.Brand));
 
+            var brand = mapper.Map<BrandDto, Brand>(new Brand());
+
             var map = mapper.Map<GetAllProductsQueryResponse, Product>(products);
 
             foreach (var item in map)
                 item.Price -= (item.Price * item.Discount / 100);
 
 
-            //return map;
-            throw new Exception("Hata mesajı");
+            return map;
         }
     }
 }
